@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'login-form',
-  templateUrl: './login-form.component.html'
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login.styles.css']
 })
 
 export class LoginFormComponent implements OnInit{
-  public user: User
+  public user
   public errors: any[] = []
 
   constructor(
@@ -31,7 +32,7 @@ export class LoginFormComponent implements OnInit{
     this._authService.authenticate(this._authService.formatCreds(userCreds))
     .then(
       res => {
-        component._router.navigate(['index'])
+        component._router.navigate(['search'])
       },
       err => {
         component.errors.push("Username or Password is invalid.")

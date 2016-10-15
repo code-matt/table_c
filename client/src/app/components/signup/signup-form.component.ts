@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'signup-form',
-  templateUrl: './signup-form.component.html'
+  templateUrl: './signup-form.component.html',
+  styleUrls: ['./signup.styles.css']
 })
 
 export class SignupFormComponent implements OnInit{
@@ -21,7 +22,10 @@ export class SignupFormComponent implements OnInit{
   ngOnInit(){
     this.user = {
       email: '',
-      password: ''
+      password: '',
+      firstName: '',
+      lastName: '',
+      school: ''
     }
   }
 
@@ -30,7 +34,7 @@ export class SignupFormComponent implements OnInit{
     this._authService.signup(this._authService.formatUser(userCreds))
     .then(
       res => {
-        component._router.navigate(['index'])
+        component._router.navigate(['login'])
       },
       err => {
         component.errors = err.errors

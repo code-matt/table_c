@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <h1>Login</h1>
+      <h1 class="title">Table C</h1>
       <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
         <div class="form-group">
           <label for="email">email</label>
@@ -29,6 +29,13 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+      <button
+        class = "btn btn-default"
+        type="button"
+        (click)="_router.navigate(['signup'])"
+        *ngIf="!_authService.isLoggedIn()">
+          SignUp
+      </button>
     </div>
   </div>
 </div>

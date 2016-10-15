@@ -6,7 +6,8 @@ import { Router } from '@angular/router'
   selector: 'signup',
   template: `
     <signup-form></signup-form>
-  `
+  `,
+  styleUrls: ['./signup.styles.css']
 })
 
 export class SignupPageComponent implements OnInit {

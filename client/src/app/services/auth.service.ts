@@ -14,7 +14,6 @@ export class AuthService {
   }
 
   authenticate(userCreds) {
-    debugger
     var service:AuthService = this
 
     return new Promise(function(resolve, reject) {
@@ -78,7 +77,10 @@ export class AuthService {
     return JSON.stringify({ 
       user: {
         email: data.email,
-        password: data.password
+        password: data.password,
+        first_name: data.fistName,
+        last_name: data.lastName,
+        school: data.school
       }
     })
   }

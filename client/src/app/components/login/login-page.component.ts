@@ -6,7 +6,8 @@ import { Router } from '@angular/router'
   selector: `index-page`,
   template: `
     <login-form></login-form>
-  `
+  `,
+  styleUrls: ['./login.styles.css']
 })
 
 export class LoginPageComponent implements OnInit {
@@ -18,7 +19,7 @@ export class LoginPageComponent implements OnInit {
   
   ngOnInit(){
     if(this.authService.isLoggedIn){
-      this.router.navigate(['index'])
+      this.router.navigate(['search'])
     }
   }
 }

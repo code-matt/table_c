@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http'
 import { AppComponent }  from './app.component'
 import { IndexPageComponent }  from './components/index-page/index.component'
+import { SearchComponent }  from './components/search/search.component'
 import { PageNotFoundComponent }  from './components/404-page/404.component'
 import { RailsRedirectComponent } from './rails-redirect/rails.component'
 import { LoginFormComponent } from './components/login/login-form.component'
@@ -30,7 +31,8 @@ import { routing } from './app.routing';
     LoginFormComponent,
     SignupFormComponent,
     SignupPageComponent,
-    RailsRedirectComponent
+    RailsRedirectComponent,
+    SearchComponent
   ],
   bootstrap: [
     AppComponent

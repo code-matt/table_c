@@ -8,24 +8,12 @@ import { AuthService } from './services/auth.service'
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <h2>{{title}}</h2>
           <button
+            class="btn btn-default"
             type="button"
             (click)="_authService.logOut()"
             *ngIf="_authService.isLoggedIn()">
               LogOut
-          </button>
-          <button
-            type="button"
-            (click)="_router.navigate(['signup'])"
-            *ngIf="!_authService.isLoggedIn()">
-              SignUp
-          </button>
-          <button
-            type="button"
-            (click)="_router.navigate(['login'])"
-            *ngIf="!_authService.isLoggedIn()">
-              SignIn
           </button>
         </div>
       </div>
