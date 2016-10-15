@@ -12,4 +12,10 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :email, email: true
   validates :password, length: { minimum: 7 }
+
+  has_many :user_hashtags
+  has_many :hashtags, through: :user_hashtags 
+
+  has_many :user_conversations
+  has_many :conversations, through: :user_conversations
 end

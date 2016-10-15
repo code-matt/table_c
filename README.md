@@ -1,11 +1,11 @@
-# Raingular2
+# TableC
 
 Boilerplate with Angular2(2.0.0,CLI) frontend with a Rails5(5.0.0) Backend in api_only mode.
 Has basic signup/login forms and a protected route with username/password authentication provided by JWTs.
 Rails serves the index.html and Angular's router takes over after that.
 
 ## Installation
-Change the project name. I suggest doing find and replace 'Raingular2'
+Change the project name. I suggest doing find and replace 'TableC'
 
 This project is setup for Postgres
 

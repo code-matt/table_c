@@ -3,6 +3,10 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     create_table :users do |t|
       t.string :email, :unique => true
       t.string :password_digest
+      t.string :first_name
+      t.string :last_name
+      t.string :school
+      t.string :avatar_url
     end
   end
 end
