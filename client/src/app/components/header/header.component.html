@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row header text-center">
+    <span class="pull-left" style="padding: 6px; border: 1px solid black; border-radius: 6px; box-shadow: 2px 2px 1px #888888;" (click)="toggleActive()">
+      <img class="img-responsive" src="tablec_logo.png" style="max-width: 20px; max-height: 35px; z-index: 5; position:absolute;">
+      <div class="menustuff" [ngClass]="{'pullDown':active, 'pullUp':!active}">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 menuitem" (click)="logOut()">
+              Logout
+            </div>
+            <div class="col-xs-12 menuitem" (click)="search()">
+              Search
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+    Table C
+  </div>
+</div>

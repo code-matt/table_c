@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service'
 import { Observable } from 'rxjs'
 import { User } from '../../shared/interfaces/user.interface'
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component'
 
 @Component({
   selector: 'login-form',

@@ -1,0 +1,18 @@
+.results{
+  background-color: #FFFFFF;
+  margin-bottom: 6px;
+  box-shadow: 2px 2px 1px #888888;
+}
+
+img{
+  -ms-transform: translateX(-25); /* IE 9 */
+  -webkit-transform: translateX(-25); /* Chrome, Safari, Opera */
+  transform: translateX(-25);
+}
+
+.vertical-center {
+ min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+ min-height: 100vh; /* These two lines are counted as one :-)       */
+ display: flex;
+ align-items: center;
+}

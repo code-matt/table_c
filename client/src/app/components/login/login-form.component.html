@@ -1,41 +1,37 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <h1 class="title">Table C</h1>
-      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
-        <div class="form-group">
-          <label for="email">email</label>
-          <input
-            type="text"
-            class="form-control" 
-            id="email" name="email" 
-            #email="ngModel" 
-            [(ngModel)]="user.email">
+<div class="row text-center vertical-center"> 
+    <div class="container">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div id="logo">Table C</div>
+            <br>
+            <span style="font-style: italic;">purpose-driven meals</span>
+            <img style="max-width: 80px; max-height: 141px;" src="tablec_logo.png">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+              <div class="form-group">
+                <label for="email">email</label>
+                <input
+                  type="text"
+                  class="form-control" 
+                  id="email" name="email" 
+                  #email="ngModel" 
+                  [(ngModel)]="user.email">
+              </div>
+              <div class="form-group">
+                <label for="password">password</label>
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  id="password" 
+                  name="password" 
+                  #password="ngModel" 
+                  [(ngModel)]="user.password">
+              </div>
+              <div *ngIf="errors.length > 0">
+                <div *ngFor="let error of errors" class="bg-danger">
+                  {{error}}
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-          <label for="password">password</label>
-          <input 
-            type="password" 
-            class="form-control" 
-            id="password" 
-            name="password" 
-            #password="ngModel" 
-            [(ngModel)]="user.password">
-        </div>
-        <div *ngIf="errors.length > 0">
-          <div *ngFor="let error of errors" class="bg-danger">
-            {{error}}
-          </div>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <button
-        class = "btn btn-default"
-        type="button"
-        (click)="_router.navigate(['signup'])"
-        *ngIf="!_authService.isLoggedIn()">
-          SignUp
-      </button>
     </div>
-  </div>
 </div>

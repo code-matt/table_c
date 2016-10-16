@@ -1,25 +1,53 @@
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">When
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Today</a></li>
-    <li><a href="#">Tomorrow</a></li>
-  </ul>
+<div class="row">
+  <div class="col-xs-10">
+    <span style="padding-left: 30px; font-weight: 800;">For:</span>
+  </div>
+  <div class="col-xs-4 tablec-button" style="margin-left: 30px;" (click)="toggleFor($event)" [ngClass]="{'active':this.state.for.today, 'inactive':!this.state.for.today}">
+    Today
+  </div>
+  <div class="col-xs-4 pull-right tablec-button" style="margin-right: 30px;" (click)="toggleFor($event)" [ngClass]="{'active':this.state.for.tomorrow, 'inactive':!this.state.for.tomorrow}">
+    Tomorrow
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-10">
+    <span style="padding-left: 30px; font-weight: 800;">Eating:</span>
+  </div>
+  <div class="col-xs-4 col-xs-offset-4 tablec-button" (click)="toggleEating($event)" [ngClass]="{'active':this.state.eating.breakfast, 'inactive':!this.state.eating.breakfast}">
+    Breakfast
+  </div>
+  <div class="col-xs-4 col-xs-offset-4 tablec-button" (click)="toggleEating($event)" [ngClass]="{'active':this.state.eating.lunch, 'inactive':!this.state.eating.lunch}">
+    Lunch
+  </div>
+  <div class="col-xs-4 col-xs-offset-4 tablec-button" (click)="toggleEating($event)" [ngClass]="{'active':this.state.eating.dinner, 'inactive':!this.state.eating.dinner}">
+    Dinner
+  </div>
+  <div class="col-xs-10 col-xs-offset-1">
+    <div on-mouseover="gainFocus()" on-mouseleave="loseFocus()">
+      <label for="search" style="font-weight: 800;">At:</label>
+      <input id="search" [formControl]="search" type="text" class="form-control" placeholder="Where to eat?">
+      <div *ngIf="focus">
+        <search-results [results]="results" (load)="loadConversations($event)"></search-results>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-4 col-xs-offset-4 tablec-button" style="margin-top: 9px; padding: 15px; background-color: #FFC300;" (click)="trySearch()">
+    Table me!
+  </div>
 </div>
 
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Meal
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Breakfast</a></li>
-    <li><a href="#">Lunch</a></li>
-    <li><a href="#">Dinner</a></li>
-  </ul>
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Error</h4>
+      </div>
+      <div class="modal-body">
+        <p>Select all the options to search.</p>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<button
-  class="btn btn-default"
-  type="button">
-    Search
-</button>

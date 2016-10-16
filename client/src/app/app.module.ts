@@ -1,10 +1,14 @@
 import { NgModule }      from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'
 import { AppComponent }  from './app.component'
+import { HeaderComponent } from './components/header/header.component'
 import { IndexPageComponent }  from './components/index-page/index.component'
+import { ConversationsComponent }  from './components/conversations/conversations.component'
 import { SearchComponent }  from './components/search/search.component'
+import { SearchResultsComponent }  from './components/search/results.component'
 import { PageNotFoundComponent }  from './components/404-page/404.component'
 import { RailsRedirectComponent } from './rails-redirect/rails.component'
 import { LoginFormComponent } from './components/login/login-form.component'
@@ -21,7 +25,8 @@ import { routing } from './app.routing';
     BrowserModule,
     routing,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
@@ -32,7 +37,10 @@ import { routing } from './app.routing';
     SignupFormComponent,
     SignupPageComponent,
     RailsRedirectComponent,
-    SearchComponent
+    SearchComponent,
+    SearchResultsComponent,
+    ConversationsComponent,
+    HeaderComponent
   ],
   bootstrap: [
     AppComponent

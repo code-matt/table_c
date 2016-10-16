@@ -1,0 +1,106 @@
+.header{
+  background-color: #FFC300;
+  padding: 15px;
+  font-weight: 800;
+  font-size: 2.3em;
+  font-family: Mark My Words;
+  color: #ECECEC;
+}
+
+.menustuff{
+  background-color: #FFC300;
+  box-shadow: 2px 2px 1px #888888;
+  padding: 6px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  color: #ECECEC;
+  width: 100px;
+  position:absolute;
+  z-index: 4;
+  font-size: 16px;
+  margin-top: 34px;
+}
+
+.menuitem{
+  border:1px solid #DC9723;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #000000;
+  font-family: Helvetica;
+}
+@font-face {
+    font-family: "Mark My Words";
+    src: url("mark_my_words.ttf");
+}
+
+.pullDown{
+	animation-name: pullDown;
+	-webkit-animation-name: pullDown;	
+
+	animation-duration: 0.2s;	
+	-webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+	animation-timing-function: ease-out;	
+	-webkit-animation-timing-function: ease-out;	
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%; 		
+}
+
+@keyframes pullDown {
+	0% {
+		transform: scaleY(0.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}							
+}
+
+@-webkit-keyframes pullDown {
+	0% {
+		-webkit-transform: scaleY(0.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}		
+}
+
+
+.pullUp{
+	animation-name: pullUp;
+	-webkit-animation-name: pullUp;	
+
+	animation-duration: 0.2s;	
+	-webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+	animation-timing-function: ease-out;	
+	-webkit-animation-timing-function: ease-out;	
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%; 		
+}
+
+@keyframes pullUp {
+	0% {
+		transform: scaleY(1);
+	}
+	100% {
+		transform: scaleY(0.001);
+	}							
+}
+
+@-webkit-keyframes pullUp {
+	0% {
+		-webkit-transform: scaleY(1);
+	}
+	100% {
+		-webkit-transform: scaleY(0.001);
+	}		
+}
