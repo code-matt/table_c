@@ -1,51 +1,26 @@
-# TableC
+#Table_c
 
-Boilerplate with Angular2(2.0.0,CLI) frontend with a Rails5(5.0.0) Backend in api_only mode.
-Has basic signup/login forms and a protected route with username/password authentication provided by JWTs.
-Rails serves the index.html and Angular's router takes over after that.
+## Inspiration
+At any community dining venues, the phenomenon of people eating alone reluctantly is ubiquitous. Most people slowly enter into the tables and takes a full look of the place, looking for people to eat with. Unfortunately, there are almost always the failure cases. Habits of eating alone reluctantly leads to loneliness and depression, feeling disconnected to the community. In addition, it's hard to meet new people who share similar interest over a regular meal within a sizable community.
 
-## Installation
-Change the project name. I suggest doing find and replace 'TableC'
+## What it does
+TableC creates "purpose driven meals", connecting you to new friends by matching meal buddies with topics of shared interest. For anybody who does not want to eat alone and wants to meet a new friend, TableC curates various conversation topics for a specific meal of a day at a specific location. Akin to entering into an online game server/room, the app lets you either create or join meal conversation topics to eat with like-minded people, have great conversations, with great new friends.
 
-This project is setup for Postgres
+## How we built it
+Within 24 hours, we built the fully-designed mock-up, along with our prototype that's built with Angular2 and Ruby on Rails.
 
-```
-cd <root dir>
-bundle install
-rails db:create
-rails db:migrate
-rails db:seed
-cd client
-npm install
-ng build
-rails s
-```
+## Challenges we ran into
+Deploying all the functions including automatic location recognition and setting "nearby distance" function.
 
-Right now you have to run ```ng build``` in the client directory while
-the server is still running to see any changes you make. Still trying
-to figure out how to bring live reload back.
+## Accomplishments that we're proud of
+We built a working prototype with limited time and resources.
 
-## "Rails Resolver"
-This is my best attempt so far for making Rails's routes.rb talk with angular's
-router when people go to URL's directly. Mashed together from a few different sources online.
-```
-client/src/app/resolver/rails.component.ts
-this.router.navigate(['index'])
-```
-Replace 'index' with whatever component you want to be loaded
-for visits to the root address.
+## What we learned
+What started as an idea can be visualized and put into a working prototype in 24 hours.
 
-##JWT auth dependencies
-Rails:
-* https://github.com/nsarno/knock
-* https://github.com/codahale/bcrypt-ruby
+## What's next for TableC
+Developing our prototype further and testing it to college market in both technical and non-technical way.
 
-Angular:
-* https://github.com/auth0/angular2-jwt
-
-##Contribute!
-* Fork it
-* Create your feature branch (git checkout -b my-new-feature)
-* Commit your changes (git commit -am 'Add some feature')
-* Push to the branch (git push origin my-new-feature)
-* Create a new Pull Request
+[11:01]  
+One liner:
+TableC connects you to new friends to eat together with a topic of shared interest.
