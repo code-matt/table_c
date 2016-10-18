@@ -1,4 +1,5 @@
 #Table_c
+![Screenshot](logo.png)
 
 ## Inspiration
 At any community dining venues, the phenomenon of people eating alone reluctantly is ubiquitous. Most people slowly enter into the tables and takes a full look of the place, looking for people to eat with. Unfortunately, there are almost always the failure cases. Habits of eating alone reluctantly leads to loneliness and depression, feeling disconnected to the community. In addition, it's hard to meet new people who share similar interest over a regular meal within a sizable community.
@@ -20,7 +21,3 @@ What started as an idea can be visualized and put into a working prototype in 24
 
 ## What's next for TableC
 Developing our prototype further and testing it to college market in both technical and non-technical way.
-
-[11:01]  
-One liner:
-TableC connects you to new friends to eat together with a topic of shared interest.
